@@ -16,8 +16,8 @@ import pandas as pd
 import scipy.io as spio
 
 #testedemudança em arquivo
-#comentários pertinentes 
-#asasxzasasasasa
+
+
 plt.close('all')
 
 # #leitura de dados
