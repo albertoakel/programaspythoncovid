@@ -15,7 +15,8 @@ import datetime
 import pandas as pd
 import scipy.io as spio
 
-
+#testedemudança em arquivo
+#comentários pertinentes
 plt.close('all')
 
 # #leitura de dados
