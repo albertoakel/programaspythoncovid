@@ -6,7 +6,7 @@ Created on Tue May 19 11:24:03 2020
 @author: akel
 
 Programa Realiza plotagem de dados obtidos
-da sespa-pa e de simulações do modelo SIR.
+da sespa-pa e de simulações do modelo SIR A
 
 """
 
