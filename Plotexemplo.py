@@ -124,52 +124,52 @@ plt.title('Casos Diarios 24.05.2020 \n' + r'$R=1.4$ $\beta=0.987$ $\gamma=0.804$
 
 # plt.savefig('figuraa.png')    
 
-plt.savefig('/home/akel/Área de trabalho/image1.eps',format='eps',dpi=300,optimize=True)
+#plt.savefig('/home/akel/Área de trabalho/image1.eps',format='eps',dpi=300,optimize=True)
 # plt.savefig('/home/akel/Área de trabalho/image1.png',format='png',dpi=300)
 
 
-# fig2, ax = plt.subplots()
-# fig2.canvas.set_window_title('Casos totais')
+fig2, ax = plt.subplots()
+fig2.canvas.set_window_title('Casos totais')
 
-# ax.plot(dates1,C,'bo',label='Dados',markersize=4)
-# ax.plot(dates_sim2,Ca,'k',label='Simulacão')
-# ax.plot(dates_sim2,Ca - 5*RMSE,'k--',lw=1)
-# ax.plot(dates_sim2,Ca + 5*RMSE,'k--',lw=1)
-# # #ax.fill_between(dates_sim2, Ca- 5*RMSE, Ca + 5*RMSE, color=[0.9 ,0.4,0.0],alpha=0.3)
+ax.plot(dates1,C,'bo',label='Dados',markersize=4)
+ax.plot(dates_sim2,Ca,'k',label='Simulacão')
+ax.plot(dates_sim2,Ca - 5*RMSE,'k--',lw=1)
+ax.plot(dates_sim2,Ca + 5*RMSE,'k--',lw=1)
+# #ax.fill_between(dates_sim2, Ca- 5*RMSE, Ca + 5*RMSE, color=[0.9 ,0.4,0.0],alpha=0.3)
 
-# ax.xaxis.set_major_formatter(formatter)
-# Max_casos = np.max(Ca)
-# ax.axhline(Max_casos, color='green', lw=2,ls='--')
-# xx=[dates_sim2[0],dates_sim2[imaxsim]]
-# ax.plot(xx,[maxsum,maxsum],'k--',lw=2)
-# ax.plot([dates_sim2[imaxsim],dates_sim2[imaxsim]],[0,maxsum],'k--',lw=2)
+ax.xaxis.set_major_formatter(formatter)
+Max_casos = np.max(Ca)
+ax.axhline(Max_casos, color='green', lw=2,ls='--')
+xx=[dates_sim2[0],dates_sim2[imaxsim]]
+ax.plot(xx,[maxsum,maxsum],'k--',lw=2)
+ax.plot([dates_sim2[imaxsim],dates_sim2[imaxsim]],[0,maxsum],'k--',lw=2)
  
  
-# ax.fill_between(dates_sim2, 0, 2, (dates_sim2>dates_sim2[1080]) & (dates_sim2<dates_sim2[np.size(sim)-1]),
-#                 color=[0.0,1.0,0.0], alpha=0.4, transform=ax.get_xaxis_transform(),zorder=0)
-# ax.fill_between(dates_sim2, 0, 2, (dates_sim2>dates_sim2[920]) & (dates_sim2<dates_sim2[1080]),
-#                 color=[1.0,0.6,0.0], alpha=0.4, transform=ax.get_xaxis_transform(),zorder=0)
-# ax.fill_between(dates_sim2, 0, 2, (dates_sim2>=dates_sim2[620]) & (dates_sim2<dates_sim2[920]),
-#                   color=[1.0,0.0,0.0], alpha=0.4, transform=ax.get_xaxis_transform(),zorder=0)
+ax.fill_between(dates_sim2, 0, 2, (dates_sim2>dates_sim2[1080]) & (dates_sim2<dates_sim2[np.size(sim)-1]),
+                color=[0.0,1.0,0.0], alpha=0.4, transform=ax.get_xaxis_transform(),zorder=0)
+ax.fill_between(dates_sim2, 0, 2, (dates_sim2>dates_sim2[920]) & (dates_sim2<dates_sim2[1080]),
+                color=[1.0,0.6,0.0], alpha=0.4, transform=ax.get_xaxis_transform(),zorder=0)
+ax.fill_between(dates_sim2, 0, 2, (dates_sim2>=dates_sim2[620]) & (dates_sim2<dates_sim2[920]),
+                  color=[1.0,0.0,0.0], alpha=0.4, transform=ax.get_xaxis_transform(),zorder=0)
 
-# #anotações
-# ax.annotate('Total de casos em '  + datamax + '\n'  +str(int(maxsum)),
-#             xy=(dates_sim2[imaxsim], 12374), xycoords='data',
-#             xytext=(-15, 25), textcoords='offset points',
-#             arrowprops=dict(facecolor='black', shrink=0.05),
-#             horizontalalignment='right', verticalalignment='bottom',fontsize=14)
+#anotações
+ax.annotate('Total de casos em '  + datamax + '\n'  +str(int(maxsum)),
+            xy=(dates_sim2[imaxsim], 12374), xycoords='data',
+            xytext=(-15, 25), textcoords='offset points',
+            arrowprops=dict(facecolor='black', shrink=0.05),
+            horizontalalignment='right', verticalalignment='bottom',fontsize=14)
 
-# ax.set_ylabel('Total de infectados',fontsize=14)
+ax.set_ylabel('Total de infectados',fontsize=14)
 
 
-# plt.xlim(date1,date2)
-# plt.ylim(0,28000)
-# plt.legend()
-# plt.grid(True)
+plt.xlim(date1,date2)
+plt.ylim(0,28000)
+plt.legend()
+plt.grid(True)
 
-# # #titulo
-# fig2.suptitle('Simulação SIR covid-19 estado do Pará', fontsize=14)
-# plt.title('Casos totais 24.05.2020 \n' + r'$R=1.4$ $\beta=0.987$ $\gamma=0.804$ $N=94296 $')
+# #titulo
+fig2.suptitle('Simulação SIR covid-19 estado do Pará', fontsize=14)
+plt.title('Casos totais 24.05.2020 \n' + r'$R=1.4$ $\beta=0.987$ $\gamma=0.804$ $N=94296 $')
 
 plt.show()
 

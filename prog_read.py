@@ -23,6 +23,14 @@ plt.close('all')
 
 # data_path = 'https://raw.githubusercontent.com/cgre-aachen/gempy_data/master/'
 
+
+
+# temp=pd.read_csv('book.cvs')
+
+
+
+
+
 cabecalho=['date','state','city','place_type','confirmed','deaths','is_last','estimated_population_2019','city_ibge_code','confirmed_per_100k_inhabitants','death_rate']
 temp=pd.read_csv('/home/akel/Downloads/covid19-3d539980b41c4abeb5d0ecf6fab11644.csv',header=None, names=cabecalho)
 NL=np.size(temp.to_numpy(),axis=0) #número de colunas
@@ -65,4 +73,4 @@ ax.plot(t,dif,'-o')
 plt.xlim(pd.Timestamp('2020-03-18'),pd.Timestamp('2020-05-27'))
 
 ax.xaxis.set_major_formatter(formatter)
-ax.grid('on')
+# ax.grid('on')
